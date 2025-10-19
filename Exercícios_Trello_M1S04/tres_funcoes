@@ -1,0 +1,50 @@
+# Desenvolva um programa que contenha três funções:
+
+# Uma que receba uma lista de números e retorne a média.
+def calcular_media():
+    '''Recebendo uma lista com números e retornando a média'''
+    notas = []
+    for i in range(3):
+        nota = float(input(f"Digite a {i+1}ª nota: "))
+        notas.append(nota)
+    media = sum(notas) / len(notas)
+    print(f"A média ficou: {media} !")
+
+# Uma que retorne o maior e o menor número.
+def maior_menor():
+    '''Retorna o maior e o menor número'''
+    numeros = []
+    for i in range(3):
+        num = float(input(f"Digite o {i+1}º valor: "))
+        numeros.append(num)
+    maior_numero = max(numeros)
+    menor_numero = min(numeros)
+    print(f"O maior número é {maior_numero} !")
+    print(f"O menor número é {menor_numero} !")    
+
+# Função principal que chama outras funções com base na escolha do usuário
+def funcao_principal():
+   '''Função principal que chama outras funções com base na escolha do usuário'''
+   while True:
+    print("--- Qual função você quer chamar ? ---")
+    print("[1] - Calcular uma média com 3 valores.")
+    print("[2] - Encontrar o maior e o menor número.")
+    print("[0] - Sair")
+    
+    escolha = input("Digite sua opção: ")
+    
+    if escolha == "1":
+        calcular_media()
+    elif escolha == "2":
+        maior_menor()
+    elif escolha == "0":
+        print("Programa encerrado.") 
+        break   
+    else:
+        print("Escolha uma das opções: [1] [2] [0] !")  
+         
+funcao_principal()
+    
+
+
+ 
